@@ -1,3 +1,4 @@
+
 use sample_data;
 
 SELECT DISTINCT
@@ -6,7 +7,7 @@ SELECT DISTINCT
 FROM
   `sold_car_orders`
 WHERE
-  `year` = ${year}
+  `year` = 2000
 ORDER BY
   `selling_price` DESC
 LIMIT
