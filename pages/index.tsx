@@ -96,6 +96,10 @@ export default function Home() {
     `/api/gateway/avg_price_per_year`,
     fetcher as Fetcher<AvgPriceByYearData, string>
   );
+  const { data: avgPriceByfuel } = useSWR(
+    `/api/gateway/get_price_by_fuel`,
+    fetcher as Fetcher<AvgPriceByYearData, string>
+  );
   const { data: orderByBrandYearData } = useSWR(
     `/api/gateway/order_by_brand_year?year=${year}`,
     fetcher as Fetcher<OrderByBrandYearData, string>
@@ -133,6 +137,14 @@ export default function Home() {
       label: "Average Selling Price (K)",
       borderColor: "rgb(255, 99, 132)",
       backgroundColor: "rgba(255, 99, 132, 0.5)",
+    },
+    {
+      data: avgPriceByfuel?.data.rows.map((i) =>
+        Math.round(Number(i.price) / 1000)
+      ),
+      label: "Average Selling Price by fuel(K)",
+      borderColor: "rgb(125, 99, 132)",
+      backgroundColor: "rgba(125, 99, 132, 0.5)",
     },
   ];
 

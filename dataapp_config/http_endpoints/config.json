@@ -1,5 +1,22 @@
 [
   {
+    "name": "/get_price_by_fuel",
+    "description": "",
+    "method": "GET",
+    "endpoint": "/get_price_by_fuel",
+    "data_source": {
+      "cluster_id": 1379661944646227290
+    },
+    "params": [],
+    "settings": {
+      "timeout": 5000,
+      "row_limit": 50
+    },
+    "sql_file": "sql/GET-get_price_by_fuel.sql",
+    "type": "sql_endpoint",
+    "return_type": "json"
+  },
+  {
     "name": "/avg_price_per_year",
     "description": "",
     "method": "GET",
