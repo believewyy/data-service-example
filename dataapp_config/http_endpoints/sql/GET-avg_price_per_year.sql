@@ -1,14 +1,14 @@
--- use sample_data;
--- /
--- SELECT
---   `year`,
---   AVG(`selling_price`) AS price
--- FROM
---   `sample_data`.`sold_car_orders`
--- GROUP BY
---   `year`
--- ORDER BY
---   `year`;
-USE fortune500;
+use sample_data;
 
-SELECT * FROM fortune500_2018_2022;
+SELECT
+  `year`,
+  AVG(`selling_price`) AS price
+FROM
+  `sample_data`.`sold_car_orders`
+GROUP BY
+  `year`
+ORDER BY
+  `year`;
+-- USE fortune500;
+
+-- SELECT * FROM fortune500_2018_2022;
