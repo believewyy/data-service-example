@@ -12,3 +12,6 @@ GROUP BY
 ORDER BY
   order_count DESC
 LIMIT 10;
+-- USE fortune500;
+
+-- SELECT * FROM fortune500_2018_2022; 
